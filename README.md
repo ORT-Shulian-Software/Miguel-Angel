@@ -13,15 +13,15 @@ Las bancas de diputados se asignan proporcionalmente en base a los votos que obt
 - Las bancas a repartir
 - El total del padrón (este número no es solamente la suma de votos, cuenta también quienes no fueron a votar, los votos en blanco y los anulados)
 
-La idea es construir tests para esta función hipotética. Ponganle el nombre que quieran, pero como dije antes, toma 3 parámetros. Los votos por agrupación van a ser `list[int]`, y las bancas y el padrón, enteros. La función retorna una lista de bancas por agrupación (`list[int]`) en el mismo orden para la lista de votos.
+La idea es construir tests para esta función hipotética, `bancas_por_agrupación`. Toma 3 parámetros: Los votos por agrupación, que van a ser `list[int]`,las bancas y el padrón, ambos enteros. La función retorna una lista de bancas por agrupación (`list[int]`) en el mismo orden para la lista de votos.
 
-Por ejemplo, en 2023, San Juan renovaba 3 bancas de diputados. De un total de 607413 electores, LA LIBERTAD AVANZA obtuvo 145782 votos, UNION POR LA PATRIA 145188 votos y JUNTOS POR EL CAMBIO 107908 votos. Recibieron una banca cada uno. Es decir, de nuestra función hipotética *f*, debería ocurrir que `f([145782,145188,107908],3,607413)` debería devolver `[1,1,1]`.
+Por ejemplo, en 2023, San Juan renovaba 3 bancas de diputados. De un total de 607413 electores, LA LIBERTAD AVANZA obtuvo 145782 votos, UNION POR LA PATRIA 145188 votos y JUNTOS POR EL CAMBIO 107908 votos. Recibieron una banca cada uno. Es decir, de nuestra función hipotética *bancas_por_agrupación*, debería ocurrir que `bancas_por_agrupación([145782,145188,107908],3,607413)` debería devolver `[1,1,1]`.
 
-Piensen un conjunto de tests para esta función, y escribanlos para `pytest`. Pueden usar resultados de elecciones anteriores como referencia. Pueden ver datos de elecciones anteriores en: https://resultados.mininterior.gob.ar/. Para ver votos y bancas del 2023, pueden ver: https://www.pagina12.com.ar/601412-resultados-elecciones-2023-mapas-interactivos-con-los-datos-.
+Piensen un conjunto de tests para esta función, y escribanlos para `pytest en el archivo *test_bancas.py*. **Todavía no tienen que hacer la función**, por lo tanto, los tests deberían fallar. Pueden usar resultados de elecciones anteriores como referencia. Pueden ver datos de elecciones anteriores en: https://resultados.mininterior.gob.ar/. Para ver votos y bancas del 2023, pueden ver: https://www.pagina12.com.ar/601412-resultados-elecciones-2023-mapas-interactivos-con-los-datos-.
 
 ## Parte 2
 
-Ahora si, hacer el programa. Pueden ver como es el algoritmo en los siguientes links:
+Ahora si, completar la función `bancas_por_agrupación` en *main.py*. Pueden ver como es el algoritmo en los siguientes links:
 - https://chequeado.com/el-explicador/como-funciona-el-sistema-dhondt-conoce-como-se-cuentan-los-votos-y-se-reparten-las-bancas-del-congreso-nacional/
 - https://buenosaires.gob.ar/sites/default/files/media/document/2021/11/03/cf6fa751bd98e12d862873d24f0417820d5d6f5c.pdf
 - https://es.wikipedia.org/wiki/Sistema_D%27Hondt
